@@ -1,6 +1,8 @@
 package me.xiao.learn.kotlin
 
 import java.io.File
+import java.nio.file.Files
+import java.nio.file.Paths
 import java.util.*
 
 /**
@@ -14,10 +16,30 @@ import java.util.*
 fun main(args: Array<String>) {
 //    dataClass()
 //    utils2()
-    printFun()
+//    printFun()
 //    withClass()
+//    iouse()
+    genericSample()
 }
 
+fun genericSample() {
+//    TODO 不懂是什么意思
+
+
+//    public final class Gson{
+//        public <T> T fromJson(JsonElement json, Class<T> classOfT){
+//
+//        }
+//    }
+
+//    inline fun <reified T : Any> Gson.fromJson(json): T = this.fromjson(this, T::class.java)
+}
+
+
+fun iouse() {
+    val stream = Files.newInputStream(Paths.get("C:\\Users\\BaoQiang\\Desktop\\1.txt"))
+    stream.buffered().reader().use { reader -> println(reader.readText()) }
+}
 
 fun withClass() {
     class A {
